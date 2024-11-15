@@ -9,305 +9,13 @@
       rel="stylesheet"
     />
     <title>Print your own model with STL files | 3MFA</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        background-color: #060709;
-        font-family: sans-serif;
-        color: #fff;
-        overflow-x: hidden;
-      }
-
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 20px;
-        background-color: #161616;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-      }
-
-      .logo {
-        display: flex;
-        align-items: center;
-      }
-
-      .logo img {
-        width: 48px;
-        margin-right: 10px;
-      }
-
-      .logo a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 24px;
-        font-weight: bold;
-      }
-
-      .nav-bar {
-        display: flex;
-        justify-content: space-between;
-        flex-grow: 1;
-        justify-content: center;
-      }
-
-      .nav-bar ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        display: flex;
-      }
-
-      .nav-bar li {
-        margin-left: 20px;
-      }
-
-      .nav-bar a {
-        text-decoration: none;
-        color: #c7c7c7;
-        font-size: 16px;
-        transition: color 0.3s;
-      }
-
-      .nav-bar a:hover {
-        color: #2e8adb;
-      }
-
-      .menu-button {
-        
-        display: none;
-        background: none;
-        border: none;
-        cursor: pointer;
-        position: relative;
-        width: 40px;
-        height: 40px;
-      }
-
-      .menu-button div {
-        background: white;
-        height: 4px;
-        width: 100%;
-        position: absolute;
-        left: 0;
-        transition: all 0.3s ease;
-      }
-
-      .menu-button div:nth-child(1) {
-        top: 10px;
-      }
-
-      .menu-button div:nth-child(2) {
-        top: 18px;
-      }
-
-      .menu-button div:nth-child(3) {
-        top: 26px;
-      }
-
-      .menu-button.active div:nth-child(1) {
-        transform: rotate(45deg);
-        top: 18px; /* Center it */
-      }
-
-      .menu-button.active div:nth-child(2) {
-        opacity: 0; /* Hide the middle line */
-      }
-
-      .menu-button.active div:nth-child(3) {
-        transform: rotate(-45deg);
-        top: 18px; /* Center it */
-      }
-
-      .overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #000;
-        z-index: 1000;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
-
-      .overlay--active {
-        display: flex;
-      }
-
-      .overlay ul {
-        list-style: none;
-        padding: 20px;
-        font-size: 18px;
-      }
-
-      .overlay li {
-        margin-bottom: 20px;
-      }
-
-      .overlay a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 24px;
-        transition: all 0.2s;
-      }
-
-      .overlay a:hover {
-        color: #2e8adb;
-        text-decoration: underline;
-      }
-
-      .close-button {
-        position: absolute;
-        top: -20px;
-        right: -170px;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 50px;
-        cursor: pointer;
-      }
-
-      .content {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.615), rgba(0, 0, 0, 0.5)), url("/assets/products/Chubby_Dinosaur.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100vh;
-        padding-top: 60px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
-
-      .content h1 {
-        font-family: "Jersey 10", sans-serif;
-        font-weight: 400;
-        font-size: 8vh;
-        text-align: center;
-        margin-bottom: 20px;
-      }
-
-      .content p {
-        font-size: 1.5rem;
-        margin-top: 20px;
-      }
-
-      .form-container {
-        background-color: #161616;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        text-align: center;
-        max-width: 600px;
-        width: 100%;
-        margin-top: 30px;
-      }
-
-      .form-container h2 {
-        font-size: 2rem;
-        font-family: "Jersey 10", sans-serif;
-        font-weight: 400;
-      }
-      .file-name {
-            margin-top: 10px;
-            color: #c7c7c7;
-            font-size: 1.1rem;
-            font-weight: 400;
-        }
-      select,
-      input[type="file"],
-      button {
-        width: 100%;
-        padding: 12px;
-        margin-top: 20px;
-        border-radius: 10px;
-        border: none;
-        background-color: #ffffffd2;
-        color: #000;
-        font-size: 1.1rem;
-        outline: none;
-      }
-
-      button {
-        background-color: #2e8adb;
-        color: white;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      button:hover {
-        background-color: #1e6ca7;
-      }
-      .file-upload-btn {
-            margin-top: 1rem;
-            display: inline-block;
-            background-color: #2e8adb;
-            color: white;
-            padding: 12px 24px;
-            font-size: 1.2rem;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            text-align: center;
-        }
-
-        .file-upload-btn:hover {
-            background-color: #1e6ca7;
-        }
-
-        .file-upload-btn:active {
-            background-color: #155a8a;
-        }
-        input[type="file"] {
-            display: none;
-        }
-      @media only screen and (max-width: 600px) {
-        .header {
-          padding: 10%;
-        }
-        .nav-bar {
-          display: none;
-        }
-
-        .menu-button {
-          display: block;
-          position: absolute;
-          top: 0px;
-          right: 20px;
-        }
-
-        .form-container {
-          width: 90%;
-          padding: 20px;
-        }
-
-        .content h1 {
-          font-size: 10vh;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="pyo.css" />
   </head>
 
   <body>
     <header>
       <div class="logo">
-        <img src="/assets/favicon.svg" alt="Logo" />
+        <img src="/assets/favicon.svg" href ="/index.html" alt="Logo" />
         <a href="/index.html">3MFA</a>
       </div>
       <nav class="nav-bar">
@@ -323,6 +31,7 @@
         <div></div>
         <div></div>
       </button>
+      <a href="/contact.html" ><button class="btn-contact-us">Contact Us</button></a>
       <div class="overlay">
         <button class="close-button" id="close-button">×</button>
         <ul>
@@ -330,6 +39,12 @@
           <li><a href="/products.html">Produits</a></li>
           <li><a href="/printyourown.html">Imprimer</a></li>
           <li><a href="/about.html">About US</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+          <footer style="position: fixed; bottom: 0;">
+            
+            <a href="https://github.com/G0ldsand01/3MFA" class="link-github" > 
+            <img src="assets/github.svg"  class="logo-github" alt="Visit GitHub Project">Visit GitHub Project </a>
+          </footer>
         </ul>
       </div>
     </header>
@@ -352,72 +67,10 @@
         <div class="file-name" id="fileName">No file chosen</div>
     <input type="file" id="fileInput" accept=".stl">
         <!-- Submit Button -->
-        <button onclick="uploadAndSliceSTL()" >Upload STL, Slice, and Print</button>
+        <button class="button" onclick="uploadAndSliceSTL()" >Upload STL, Slice, and Print</button>
       </div>
     </div>
 
-    <script>
-  let stlFile;
-  const printers = {
-    bambuA1: { name: "Bambu Lab A1", brand: "bambu", ip: "YOUR_BAMBU_A1_IP", apiToken: "YOUR_BAMBU_A1_API_TOKEN" },
-    bambuA1Mini: { name: "Bambu Lab A1 Mini", brand: "bambu", ip: "YOUR_BAMBU_A1_MINI_IP", apiToken: "YOUR_BAMBU_A1_MINI_API_TOKEN" },
-    bambuP1P: { name: "Bambu Lab P1P", brand: "bambu", ip: "YOUR_BAMBU_P1_PRO_IP", apiToken: "YOUR_BAMBU_P1_PRO_API_TOKEN" },
-    ender3v2se: { name: "Ender 3 v2 SE", brand: "ender", ip: "YOUR_ENDER_3V2_SERIAL_IP", apiToken: "YOUR_ENDER_3V2_SERIAL_API_TOKEN" },
-    ender3V2: { name: "Ender 3 v2", brand: "ender", ip: "YOUR_ENDER_3V2_IP", apiToken: "YOUR_ENDER_3V2_API_TOKEN" }
-  };
-
-  document.getElementById('fileInput').addEventListener('change', (event) => {
-    stlFile = event.target.files[0];
-    document.getElementById('fileName').textContent = stlFile ? `Selected file: ${stlFile.name}` : "No file chosen";
-  });
-
-  async function uploadAndSliceSTL() {
-    if (!stlFile) return alert("Please upload an STL file.");
-
-    const selectedPrinter = printers[document.getElementById('printerSelect').value];
-    if (!selectedPrinter || !selectedPrinter.ip) return alert("Printer configuration is missing.");
-  
-    try {
-      const formData = new FormData();
-      formData.append("file", stlFile);
-
-      const sliceResponse = await fetch("YOUR_BACKEND_SLICER_API_URL", { method: "POST", body: formData });
-      if (!sliceResponse.ok) throw new Error("Failed to slice STL.");
-
-      const gcodeData = await sliceResponse.arrayBuffer();
-      const uploadResponse = await fetch(`http://${selectedPrinter.ip}/api/v1/print/gcode`, {
-        method: "POST",
-        headers: { "Authorization": `Bearer ${selectedPrinter.apiToken}`, "Content-Type": "application/octet-stream" },
-        body: gcodeData
-      });
-      if (!uploadResponse.ok) throw new Error("Failed to upload G-code.");
-
-      alert("Print job started!");
-    } catch (error) {
-      console.error(error);
-      alert("An error occurred. Check console for details.");
-    }
-  
-      // Get the file input and file name display elements
-      const fileInput = document.getElementById('fileInput');
-        const fileNameDisplay = document.getElementById('fileName');
-
-        // Listen for changes to the file input
-        fileInput.addEventListener('change', function() {
-            const file = fileInput.files[0];  // Get the selected file
-            if (file) {
-                fileNameDisplay.textContent = `Selected file: ${file.name}`;  // Update file name display
-            } else {
-                fileNameDisplay.textContent = "No file chosen";  // Default message when no file is selected
-            }
-        });
-  }
-      document.getElementById("menu-button").addEventListener("click", () => {
-        document.querySelector(".overlay").classList.toggle("overlay--active");
-      });
-      document.getElementById("close-button").addEventListener("click", () => {
-        document.querySelector(".overlay").classList.toggle("overlay--active");
-      });
-    </script>
+    <script src="pyo.js"></script>
   </body>
 </html>

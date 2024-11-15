@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Products | 3MFA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="products.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
+    <link href="contact.css" rel="stylesheet"/>
+    <title>Contact us | 3MFA</title>
   </head>
+
   <body>
     <header>
       <div class="logo">
@@ -43,16 +45,24 @@
         </ul>
       </div>
     </header>
-   
-    <div class="title" style="padding-top: 10%; display: flex; justify-content: center; align-items: center;">
-      <h1 >Find a model</h1>
+    <div class="content">
+      <h1>Need Something?</h1>
+      <p>Contact us and we'll get back to you as soon as possible.</p>
+      <form  action="https://formspree.io/f/mbljybgn" method="POST">
+        <div class="form-container">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+          <button type="submit">Send</button>
+        </div>
+      </form>
     </div>
+   
+    
 
-    <main class="flex flex-col items-center justify-center">
-      <div class="container mx-auto">
-        <div id="product-grid" class="grid gap-10 mt-3 pb-10"></div>
-      </div>
-    </main>
-    <script src="products.js"></script>
+    <script src="contact.js"></script>
   </body>
 </html>
