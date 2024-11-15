@@ -16,7 +16,7 @@ const products = {
     description: "A small figurine to decorate your desk.2",
     image: "/assets/products/spider.png",
     stl: "/assets/files/Pumpkin_Spider.stl",
-    preview: "/assets/products/preview/Sliced_spider.jpg",
+    preview: "/assets/products/preview/sliced_spider.jpg",
     model:
       "https://www.printables.com/model/1043965-cute-little-pumpkin-spider",
     file_name: "Pumpkin_Spider.stl",
