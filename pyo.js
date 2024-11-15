@@ -1,6 +1,6 @@
 let stlFile;
   const printers = {
-    bambuA1: { name: "Bambu Lab A1", brand: "bambu", ip: "YOUR_BAMBU_A1_IP", apiToken: "YOUR_BAMBU_A1_API_TOKEN" },
+    bambuA1: { name: "Bambu Lab A1", brand: "bambu", ip: "192.168.18.28", apiToken: "03919C432500173" },
     bambuA1Mini: { name: "Bambu Lab A1 Mini", brand: "bambu", ip: "YOUR_BAMBU_A1_MINI_IP", apiToken: "YOUR_BAMBU_A1_MINI_API_TOKEN" },
     bambuP1P: { name: "Bambu Lab P1P", brand: "bambu", ip: "YOUR_BAMBU_P1_PRO_IP", apiToken: "YOUR_BAMBU_P1_PRO_API_TOKEN" },
     ender3v2se: { name: "Ender 3 v2 SE", brand: "ender", ip: "YOUR_ENDER_3V2_SERIAL_IP", apiToken: "YOUR_ENDER_3V2_SERIAL_API_TOKEN" },
