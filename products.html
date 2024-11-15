@@ -9,205 +9,15 @@
       href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap"
       rel="stylesheet"
     />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        background-color: #060709;
-        font-family: sans-serif;
-      }
-
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        background-color: #161616;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-      }
-
-      .logo {
-        display: flex;
-        align-items: center;
-      }
-
-      .logo img {
-        width: 48px;
-        margin-right: 10px;
-      }
-
-      .logo a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 24px;
-        line-height: 48px;
-      }
-
-      .nav-bar {
-        display: flex;
-        justify-content: center;
-        flex-grow: 1;
-      }
-
-      .nav-bar ul {
-        list-style: none;
-        display: flex;
-      }
-
-      .nav-bar li {
-        margin-left: 20px;
-      }
-
-      .nav-bar a {
-        text-decoration: none;
-        color: #c7c7c7;
-      }
-
-      .overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.997);
-        z-index: 1000;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
-
-      .overlay--active {
-        display: flex;
-      }
-
-      .overlay li {
-        padding-top: 20px;
-      }
-
-      .overlay a {
-        color: #fff;
-        text-decoration: none;
-        transition: all 0.2s;
-      }
-
-      .overlay a:hover {
-        color: #2e8adb;
-        text-decoration: underline;
-      }
-
-      .menu {
-        display: none;
-        background-color: rgba(0, 128, 255, 0.827);
-        padding: 10px;
-        border-radius: 25px;
-        color: aliceblue;
-        border: none;
-      }
-
-      .close {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        color: white;
-        font-size: 30px;
-        cursor: pointer;
-      }
-
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); /* 3 columns */
-        gap: 20px;
-        padding-top: 70px; /* Space for fixed header */
-      }
-
-      .product-card {
-        background-color: #161616;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        transition: transform 0.2s; /* Smooth transition for hover effect */
-      }
-
-      .product-card:hover {
-        transform: scale(1.1); /* Scale effect on hover */
-      }
-
-      .product-card img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 10px 10px 0 0;
-      }
-
-      .product-card h2 {
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: 10px;
-        color: #fff;
-      }
-
-      .product-card p {
-        font-size: 14px;
-        color: #ccc;
-        margin-bottom: 20px;
-      }
-
-      .product-card a {
-        text-decoration: none;
-        color: #fff;
-      }
-
-      .product-card a:hover {
-        color: #2e8adb;
-      }
-
-      @media only screen and (max-width: 600px) {
-        .nav-bar {
-          display: none;
-        }
-        .menu {
-          display: block;
-        }
-        .grid {
-          grid-template-columns: 1fr; /* 1 column layout */
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="products.css">
   </head>
   <body>
     <header>
       <div class="logo">
-        <img src="assets/favicon.svg" alt="logo" />
-        <a href="index.html">3MFA</a>
+        <img src="/assets/favicon.svg" href ="/index.html" alt="Logo" />
+        <a href="/index.html">3MFA</a>
       </div>
-      <button class="menu">Menu</button>
-      <div class="nav-bar">
-        <ul>
-          <li><a href="/index.html">Accueil</a></li>
-          <li><a href="/products.html">Produits</a></li>
-          <li><a href="/printyourown.html">Imprimer</a></li>
-          <li><a href="/about.html">About US</a></li>
-        </ul>
-      </div>
-    </header>
-    <div class="overlay">
-      <span class="close">&times;</span>
-      <nav>
+      <nav class="nav-bar">
         <ul>
           <li><a href="/index.html">Accueil</a></li>
           <li><a href="/products.html">Produits</a></li>
@@ -215,10 +25,31 @@
           <li><a href="/about.html">About US</a></li>
         </ul>
       </nav>
-    </div>
+      <button class="menu-button" id="menu-button">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+      <a href="/contact.html" ><button class="button-contact-us">Contact Us</button></a>
+      <div class="overlay">
+        <button class="close-button" id="close-button">×</button>
+        <ul>
+          <li><a href="/index.html">Accueil</a></li>
+          <li><a href="/products.html">Produits</a></li>
+          <li><a href="/printyourown.html">Imprimer</a></li>
+          <li><a href="/about.html">About US</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+          <footer style="position: fixed; bottom: 0;">
+            <p>&copy; 2023 3MFA</p>
+            <a href="https://github.com/G0ldsand01/3MFA" class="link-github" > 
+            <img src="assets/github.svg"  class="logo-github" alt="Visit GitHub Project">Visit GitHub Project </a>
+          </footer>
+        </ul>
+      </div>
+    </header>
     
     <div class="flex flex-row items-center justify-center">
-      <h1 class="pb-5 pt-5 text-4xl font-bold " style="font-size: 4rem; color: #c7c7c7; display: flex; justify-content: center; align-items: center; padding-top: 5%;">Find a model</h1>
+      <h1 >Find a model</h1>
     </div>
 
     <main class="flex flex-col items-center justify-center">
@@ -227,125 +58,6 @@
       </div>
     </main>
 
-    <script>
-      const products = {
-          1: {
-            id: 1,
-            name: "Product 1",
-            url: "/products/1",
-            description: "A small figurine to decorate your desk.1",
-            image: "/assets/products/Chubby_Dinosaur.png",
-            stl: "/assets/dinosaur.5.stl",
-            file_name: "Chubby_Dinausaur.stl",
-            preview: "/assets/Sliced_Chubby_Dinosaur.png",
-          },
-          2: {
-            id: 2,
-            name: "Pumpkin Spider",
-            url: "/products/2",
-            description: "A small figurine to decorate your desk.2",
-            image: "/assets/products/spider.png",
-            stl: "/assets/Pumpkin_Spider.stl",
-            preview: "/assets/sliced_spider.jpg",
-            model:
-              "https://www.printables.com/model/1043965-cute-little-pumpkin-spider",
-            file_name: "Pumpkin_Spider.stl",
-          },
-          3: {
-            id: 3,
-            name: "Product 3",
-            url: "/ products/3",
-            description: "A small figurine to decorate your desk.3",
-            image: "/assets/products/Chubby_Dinosaur.png",
-            stl: "/assets/products/product3.stl",
-          },
-          4: {
-            id: 4,
-            name: "Product 4",
-            url: "/products/4",
-            description: "A small figurine to decorate your desk.4",
-            image: "/assets/products/Chubby_Dinosaur.png",
-            stl: "/assets/products/product4.stl",
-          },
-          5: {
-            id: 5,
-            name: "Product 5",
-            url: "/products/5",
-            description: "A small figurine to decorate your desk.5",
-            image: "/assets/products/Chubby_Dinosaur.png",
-            stl: "/assets/products/product5.stl",
-          },
-          6: {
-            id: 6,
-            name: "Product 6",
-            url: "/products/6",
-            description: "A small figurine to decorate your desk.6",
-            image: "/assets/products/Chubby_Dinosaur.png",
-            stl: "/assets/products/product6.stl",
-          },
-          7: {
-            id: 7,
-            name: "Product 7",
-            url: "/products/7",
-            description: "A small figurine to decorate your desk.7",
-            image: "/assets/products/Chubby_Dinosaur.png",
-            stl: "/assets/products/product7.stl",
-          },
-          8: {
-            id: 8,
-            name: "Product 8",
-            url: "/products/8",
-            description: "A small figurine to decorate your desk.8",
-            image: "/assets/products/Chubby_Dinosaur.png",
-            stl: "/assets/products/product8.stl",
-          },
-          9: {
-            id: 5,
-            name: "Product 9",
-            url: "/products/9",
-            description: "A small figurine to decorate your desk.9",
-            image: "/assets/products/Chubby_Dinosaur.png",
-            stl: "/assets/products/product9.stl",
-          },
-          10: {
-            id: 10,
-            name: "Product 10",
-            url: "/products/10",
-            description: "A small figurine to decorate your desk.10",
-            image: "/assets/products/Chubby_Dinosaur.png",
-            stl: "/assets/products/product10.stl",
-          },
-        };
-      const productGrid = document.getElementById("product-grid");
-
-      Object.values(products).forEach((product) => {
-        const productCard = document.createElement("div");
-        productCard.className = "product-card";
-
-        productCard.innerHTML = `
-          <a href="product.html?id=${product.id}" style="text-decoration: none;">
-            <img src="${product.image}" alt="${product.name}" />
-            <h2>${product.name}</h2>
-            <p>${product.description}</p>
-          </a>
-        `;
-
-        productGrid.appendChild(productCard );
-      });
-
-      document.addEventListener("DOMContentLoaded", () => {
-        const menuOpen = document.querySelector(".menu");
-        const menuClose = document.querySelector(".close");
-        const overlay = document.querySelector(".overlay");
-
-        menuOpen.addEventListener("click", () => {
-          overlay.classList.add("overlay--active");
-        });
-
-        menuClose.addEventListener("click", () => {
-          overlay.classList.remove("overlay--active");
-        });
-      });
-    </script>
+    <script src="products.js"></script>
   </body>
 </html>
