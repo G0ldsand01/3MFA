@@ -8,6 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap"
       rel="stylesheet"
     />
+    <link href="upload.php">
     <title>Print your own model with STL files | 3MFA</title>
     <link rel="stylesheet" href="pyo.css" />
   </head>
@@ -31,9 +32,8 @@
         <div></div>
         <div></div>
       </button>
-      <a href="/contact.html" ><button class="btn-contact-us">Contact Us</button></a>
+      <a href="/contact.html" ><button class="button-contact-us">Contact Us</button></a>
       <div class="overlay">
-        <button class="close-button" id="close-button">×</button>
         <ul>
           <li><a href="/index.html">Home</a></li>
           <li><a href="/products.html">Products</a></li>
@@ -49,25 +49,10 @@
       </div>
     </header>
     <div class="content">
-      <div class="form-container">
-        <h2>Select Printer and Upload STL File</h2>
-        
-        <!-- Dropdown for selecting the printer model -->
-        <label for="printerSelect">Choose your printer:</label>
-        <select id="printerSelect">
-          <option value="bambuA1">Bambu Lab A1</option>
-          <option value="bambuA1Mini">Bambu Lab A1 Mini</option>
-          <option value="bambuP1P">Bambu Lab P1P</option>
-          <option value="ender3">Ender 3 V3 SE</option>
-          <option value="ender3V2">Ender 3 V2</option>
-        </select>
-
-        <!-- File input for uploading STL -->
-        <label for="fileInput" class="file-upload-btn">Choose File</label>
-        <div class="file-name" id="fileName">No file chosen</div>
-    <input type="file" id="fileInput" accept=".stl">
-        <!-- Submit Button -->
-        <button class="button" onclick="uploadAndSliceSTL()" >Upload STL, Slice, and Print</button>
+      
+      <div class="form-container"> 
+        <h2>For 3MFA to print your model, please join our discord server and send us your STL file via the channel #Print-Requests and create a ticket with the printer you want to use, your name, email, project file and a short description of your project.</h2>
+        <a href="https://discord.gg/ZtgxHPyP"><button>Join our discord server</button></a>
       </div>
     </div>
 

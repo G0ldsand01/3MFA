@@ -79,6 +79,7 @@
     position: relative;
     width: 40px;
     height: 40px;
+    z-index: 1100; /* Ensures it stays above the overlay */
   }
   .button-contact-us {
     display: black;
@@ -166,25 +167,6 @@
     color: #2e8adb;
     text-decoration: underline;
   }
-
-  .close-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 100px;
-    cursor: pointer;
-  }
-
-
-
-
-
-
-
-
   .container {
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.615),
@@ -254,7 +236,6 @@
       position: absolute;
       top: 20px;
       right: 20px;
-      z-index: 1000;
     }
     .logo-github {
         width: 40px;

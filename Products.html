@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Products | 3MFA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="products.css" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="products.css">
   </head>
   <body>
     <header>
@@ -15,9 +19,9 @@
       </div>
       <nav class="nav-bar">
         <ul>
-          <li><a href="/index.html">Accueil</a></li>
-          <li><a href="/products.html">Produits</a></li>
-          <li><a href="/printyourown.html">Imprimer</a></li>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/products.html">Products</a></li>
+          <li><a href="/printyourown.html">Print</a></li>
           <li><a href="/about.html">About US</a></li>
         </ul>
       </nav>
@@ -28,11 +32,11 @@
       </button>
       <a href="/contact.html" ><button class="button-contact-us">Contact Us</button></a>
       <div class="overlay">
-        <button class="close-button" id="close-button">×</button>
+        
         <ul>
-          <li><a href="/index.html">Accueil</a></li>
-          <li><a href="/products.html">Produits</a></li>
-          <li><a href="/printyourown.html">Imprimer</a></li>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/products.html">Products</a></li>
+          <li><a href="/printyourown.html">Print</a></li>
           <li><a href="/about.html">About US</a></li>
           <li><a href="/contact.html">Contact Us</a></li>
           <footer style="position: fixed; bottom: 0;">
@@ -43,8 +47,8 @@
         </ul>
       </div>
     </header>
-   
-    <div class="title" style="padding-top: 10%; display: flex; justify-content: center; align-items: center;">
+    
+    <div class="flex flex-row items-center justify-center">
       <h1 >Find a model</h1>
     </div>
 
@@ -53,6 +57,7 @@
         <div id="product-grid" class="grid gap-10 mt-3 pb-10"></div>
       </div>
     </main>
+
     <script src="products.js"></script>
   </body>
 </html>

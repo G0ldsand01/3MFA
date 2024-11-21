@@ -72,7 +72,6 @@ header {
   }
 
   .menu-button {
-    
     display: none;
     background: none;
     border: none;
@@ -80,8 +79,9 @@ header {
     position: relative;
     width: 40px;
     height: 40px;
+    z-index: 1100; /* Ensures it stays above the overlay */
   }
-
+  
   .menu-button div {
     background: white;
     height: 4px;
@@ -89,33 +89,36 @@ header {
     position: absolute;
     left: 0;
     transition: all 0.3s ease;
+    border-radius: 2px; /* Rounded edges for better visuals */
   }
-
+  
   .menu-button div:nth-child(1) {
     top: 10px;
   }
-
+  
   .menu-button div:nth-child(2) {
     top: 18px;
   }
-
+  
   .menu-button div:nth-child(3) {
     top: 26px;
   }
-
+  
+  /* Active state for menu-button */
   .menu-button.active div:nth-child(1) {
     transform: rotate(45deg);
-    top: 18px; /* Center it */
+    top: 18px; /* Center the line */
   }
-
+  
   .menu-button.active div:nth-child(2) {
     opacity: 0; /* Hide the middle line */
   }
-
+  
   .menu-button.active div:nth-child(3) {
     transform: rotate(-45deg);
-    top: 18px; /* Center it */
+    top: 18px; /* Center the line */
   }
+  
 
   .overlay {
     display: none;
@@ -155,17 +158,6 @@ header {
   .overlay a:hover {
     color: #2e8adb;
     text-decoration: underline;
-  }
-
-  .close-button {
-    position: absolute;
-    top: -20px;
-    right: -170px;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 50px;
-    cursor: pointer;
   }
 .button-contact-us {
   display: black;
@@ -215,6 +207,82 @@ img {
   margin-bottom: 20px;
   text-align: center; /* Center the text */
 }
+
+.download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+  padding: 2%;
+  background-color: #4e4e4e67;
+  border-radius: 25px;
+  width: 100%;
+}
+
+#file-name {
+  color: rgb(230, 230, 230); 
+  font-size: 1.6rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px; /* Add space below the file name */
+}
+
+#model-link {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+.action-button {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 10px; /* Space between buttons */
+  margin-top: 10px;
+  width: 100%;
+  border: none;
+}
+
+.download-button, .button {
+  border: none;
+  padding: 12px 25px;
+  background-color: #4299e1;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1rem;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover, .button:hover {
+  background-color: #2b7bb3;
+}
+
+.download-button:active, .button:active {
+  background-color: #1e5e80;
+}
+
+.download-button {
+  margin-bottom: 10px; /* Add spacing between Download and Buy Now button */
+}
+
+#buy_link {
+  
+  text-decoration: none;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .download-button, .button {
+    padding: 10px 20px; /* Adjust padding for mobile */
+  }
+}
+
+
+
+
 
 /* Add media query for screens under 600px */
 @media only screen and (max-width: 600px) {
@@ -277,7 +345,7 @@ img {
     position: absolute;
     top: 20px;
     right: 20px;
-    z-index: 1000;
+    
   }
   .logo-github {
     width: 40px;

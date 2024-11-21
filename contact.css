@@ -79,6 +79,7 @@
     position: relative;
     width: 40px;
     height: 40px;
+    z-index: 1100; /* Ensures it stays above the overlay */
   }
   .button-contact-us {
     display: black;
@@ -165,17 +166,6 @@
   .overlay a:hover {
     color: #2e8adb;
     text-decoration: underline;
-  }
-
-  .close-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 100px;
-    cursor: pointer;
   }
 
   .content {
@@ -378,7 +368,7 @@
       position: absolute;
       top: 20px;
       right: 20px;
-      z-index: 1000;
+      
     }
 
     .product-grid {
