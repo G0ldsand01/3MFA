@@ -22,11 +22,12 @@ currency_by_country = {
     # Ajouter d'autres pays et leurs monnaies respectives ici
 }
 
-price_per_gram_by_currency = {
-    "CAD": 0.13,
-    "USD": 0.1,
-    "EUR": 0.09,
-    # Ajouter d'autres monnaies et leurs prix par gramme ici
+price_per_gram_by_currency = {  # Fixed the syntax error here
+    "TPU": {"CAD": 0.13, "USD": 0.1, "EUR": 0.09},
+    "PETG": {"CAD": 0.13, "USD": 0.1, "EUR": 0.09},
+    "Carbon Fiber": {"CAD": 0.25, "USD": 0.3, "EUR": 0.15},
+    "PLA": {"CAD": 0.13, "USD": 0.1, "EUR": 0.09},
+    "ABS": {"CAD": 0.13, "USD": 0.1, "EUR": 0.09}
 }
 
 # Fonction pour générer un numéro de commande unique
@@ -67,7 +68,7 @@ def order():
 
     # Calcul du coût de l'impression
     currency = currency_by_country.get(country, "USD")
-    price_per_gram = price_per_gram_by_currency[currency]
+    price_per_gram = price_per_gram_by_currency.get(material, {}).get(currency, 0.1)
     density = 1.25  # Densité du filament en g/cm3
     weight = volume * density * (infill / 100)
     cost = weight * price_per_gram
@@ -81,19 +82,21 @@ def order():
                     'product_data': {
                         'name': f'3D Print - {material} ({color}) - {infill}% infill - {volume} cm³ - {order_number}',
                     },
-                    'unit_amount': int(cost * 100) + 100,
+                    'unit_amount': int(cost * 100),  # Fixed calculation of amount (removed the extra +100)
                 },
                 'quantity': 1,
             }],
             mode='payment',
             success_url=f'https://3mfa.vercel.app/success.html?order_number={order_number}',
             cancel_url=f'https://3mfa.vercel.app/cancel.html?order_number={order_number}',
+            
         )
         payment_url = session.url
     except Exception as e:
         return f"Erreur lors de la création de la session de paiement : {str(e)}"
 
     # Sauvegarder les informations de la commande
+    os.makedirs(f"./Orders/{order_number}-{first_name}-{last_name}", exist_ok=True)
     with open(f"./Orders/{order_number}-{first_name}-{last_name}/{order_number}_user_details.txt", 'w') as f:
         f.write(f"First Name: {first_name}\n")
         f.write(f"Last Name: {last_name}\n")
@@ -105,6 +108,7 @@ def order():
         f.write(f"Cost: {cost:.2f} {currency}\n")
     
     return redirect(payment_url)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

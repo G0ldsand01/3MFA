@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3D Print Order</title>
+    <title>Custom 3D Print Order | 3MFA</title>
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/G0ldsand01/3MFA/9e673222036d8fd851043edd40cb6c8ec9209816/assets/favicon.svg" type="image/x-icon">
     <style>
       .container h1 {
         text-align: center;
         margin-top: 5em;
-        color: #4caf50;
+        color: #e8e9eb;
       }
 
       .forms {
@@ -26,16 +26,21 @@
         font-size: 1.1em;
         margin-bottom: 0.5em;
         display: block;
+        color: #e8e9eb;
+        font-weight: bold;
+        text-align: left;
+        padding-left: 0.5em;
       }
 
       input {
         width: 100%;
         padding: 0.8em;
         margin-bottom: 1em;
-        border: 1px solid #ccc;
+        border: none;
         border-radius: 0.5em;
         font-size: 1em;
         box-sizing: border-box;
+        background: #6c6c6d7f;
       }
 
       input[type="file"] {
@@ -44,7 +49,7 @@
 
       input[type="submit"],
       button[type="submit"] {
-        background-color: #4caf50;
+        background-color: #2e8adb;
         color: white;
         padding: 0.8em 1.5em;
         border: none;
@@ -56,19 +61,28 @@
 
       input[type="submit"]:hover,
       button[type="submit"]:hover {
-        background-color: #45a049;
+        border: solid 1px #357dbc;
+        background-color: #1f6fb4;
+        transition: all 0.3s ease;
       }
 
       button[type="submit"] {
         width: 100%;
         padding: 1em;
         font-size: 1.2em;
+        color: #e8e9eb;
+        background-color: #2e8adb;
+        border: solid 1px #357dbc;
+        transition: all 0.3s ease;
+        border-radius: 0.5em;
+
       }
 
       .container {
         display: flex;
         flex-direction: column;
         align-items: center;
+
       }
       select {
         display: flex;
@@ -79,6 +93,12 @@
         border-radius: 0.5em;
         font-size: 1em;
         box-sizing: border-box;
+        background: #6c6c6d7f;
+        color: #fff;
+        }
+      option {
+        color: black;
+        background-color: #e8e9eb;
       }
       .forms {
         color: #c7c7c7;
@@ -185,6 +205,7 @@
         border: none;
       }
 
+
       .menu-button div {
         background: white;
         height: 4px;
@@ -258,6 +279,51 @@
         color: #2e8adb;
         text-decoration: underline;
       }
+      @media only screen and (max-width: 1000px) {
+    .nav-bar {
+      display: none;
+    }
+    .button-contact-us {
+      display: none;
+      
+    }
+    h1 {
+      font-size: 4rem; /* Smaller font size for mobile */
+    }
+    .menu-button {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      
+    }
+
+    .product-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .logo-github {
+      margin-left: -50px;
+      padding-right: 0.2rem;
+      margin-right: 20px;
+    }
+    .link-github {
+      text-decoration: none;
+      color: #c7c7c7;
+      font-size: 24px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Font family */
+  
+      transition: all 0.2s;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+  @media  only screen and (max-width: 600px) {
+    h1{
+      font-size: 3rem;
+    }
+    
+    
+  }
     </style>
   </head>
   <body>
@@ -301,7 +367,7 @@
       </div>
     </header>
     <div class="container">
-      <h1>3D Print Order</h1>
+      <h1>Custom 3D Print Order</h1>
       <div class="forms">
         <form action="/order" method="post" enctype="multipart/form-data">
           <label for="first_name">First Name:</label>
@@ -334,10 +400,11 @@
           <input type="file" id="stl_file" name="stl_file" required /><br />
           <label for="material">Material (PLA/ABS/PETG):</label>
           <select name="material" id="material">
-            <option value="TPU">TPU</option>
             <option value="PLA">PLA</option>
-            <option value="ABS">ABS</option>
             <option value="PETG">PETG</option>
+            <option value="Carbon Fiber">PETG-CF</option>
+            <option value="ABS">ABS</option>
+            <option value="TPU">TPU</option>
           </select>
           <label for="color">Color:</label>
           <select name="color" id="color">
