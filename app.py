@@ -80,7 +80,7 @@ def order():
                 'price_data': {
                     'currency': currency,
                     'product_data': {
-                        'name': f'3D Print - {material} ({color}) - {infill}% infill - {volume} cm³ - {order_number}',
+                        'name': f'3D Print - {material} ({color}) - {infill}% infill - {order_number}',
                     },
                     'unit_amount': int(cost * 100),  # Fixed calculation of amount (removed the extra +100)
                 },
