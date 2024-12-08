@@ -40,5 +40,5 @@ Nous accueillons toutes les contributions. Si vous souhaitez participer :
 
 ## 📬 Contact
 **Pour toute question ou demande de service, n'hésitez pas à nous contacter :**
-- **Email** : [3mfaprint@gmail.com](mailto://3mfaprint@gmail.com)
+- **Email** : [3mfaprint@gmail.com](mailto:3mfaprint@gmail.com)
 - **Site Web** : [En devloppement ( Preview Avalable Here) ](https://3mfa.vercel.app/)
