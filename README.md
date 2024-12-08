@@ -24,7 +24,7 @@ Nous utilisons les dernières technologies pour garantir des résultats de haute
 - **Imprimante disponible** : BambuLab A1 (2), BambuLab P1P(1), BambuLAB A1 mini(1), Creality Ender 3 v2(1), Creality Ender 3 V2 se.
 - **Développement informatique** : Html, Java , JavaScript, C++.
 - **Services** : Configuration d'ordinateur, montage d'ordinateur **CUSTOM**, Service d'impression de vos propre modèles, et biens plus.
-- **Pour plus d'informations** : N'hésitez pas à nous contacter au courriel **Email** : [3mfaprint@gmail.com](mailto://3mfaprint@gmail.com)
+- **Pour plus d'informations** : N'hésitez pas à nous contacter au courriel **Email** : [3mfaprint@gmail.com](mailto:3mfaprint@gmail.com)
 ## 📁 Contenu du dépôt
 - **/assets/products** : Exemples de modèles 3D et de fichiers imprimables.
 - **/assets/products/preview** : Exemples de rendus et de travaux passés.
