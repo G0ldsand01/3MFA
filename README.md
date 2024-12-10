@@ -8,17 +8,14 @@ Bienvenue sur le dépôt GitHub de **3MFA** ! Nous sommes une entreprise spécia
 - **Prototypage rapide**
 - **Modèles personnalisés**
 - **Production de petites séries**
-- **Matériaux disponibles** : PLA, ABS, PETG, résine, etc.
+- **Matériaux disponibles** : PLA, ABS, PETG, autre disponible sur demande ( frais additionnels)
 
 ### 2. Rendus Visuels
-- **Visualisation 3D** : architecture, produits, animations, etc.
 - **Modélisation** : création de modèles 3D réalistes pour tout type de projet.
-- **Post-Production** : retouche et amélioration des rendus pour une qualité optimale.
+- **Post-Production** : retouche et amélioration des rendus pour une qualité optimale ainsi qu'un modèle parfait avant impression. 
 
 ### 3. Services Informatiques
 - **Consultation et conseils** pour projets informatiques et 3D.
-- **Développement d'outils personnalisés** pour améliorer l'expérience utilisateur.
-- **Maintenance et assistance technique** pour les entreprises.
 
 ## 🚀 Technologie et Compétences
 Nous utilisons les dernières technologies pour garantir des résultats de haute qualité :
@@ -27,10 +24,9 @@ Nous utilisons les dernières technologies pour garantir des résultats de haute
 - **Imprimante disponible** : BambuLab A1 (2), BambuLab P1P(1), BambuLAB A1 mini(1), Creality Ender 3 v2(1), Creality Ender 3 V2 se.
 - **Développement informatique** : Html, Java , JavaScript, C++.
 - **Services** : Configuration d'ordinateur, montage d'ordinateur **CUSTOM**, Service d'impression de vos propre modèles, et biens plus.
-- **Pour plus d'informations** : N'hésitez pas à nous contacter au courriel **Email** : mailto://3mfaprint@gmail.com
+- **Pour plus d'informations** : N'hésitez pas à nous contacter au courriel **Email** : [3mfaprint@gmail.com](mailto:3mfaprint@gmail.com)
 ## 📁 Contenu du dépôt
 - **/assets/products** : Exemples de modèles 3D et de fichiers imprimables.
-- **scripts.js** : Scripts et outils développés en interne pour l'automatisation de tâches.
 - **/assets/products/preview** : Exemples de rendus et de travaux passés.
 
 ## 📝 Contribuer
@@ -44,5 +40,5 @@ Nous accueillons toutes les contributions. Si vous souhaitez participer :
 
 ## 📬 Contact
 **Pour toute question ou demande de service, n'hésitez pas à nous contacter :**
-- **Email** : [3mfaprint@gmail.com](mailto://3mfaprint@gmail.com)
+- **Email** : [3mfaprint@gmail.com](mailto:3mfaprint@gmail.com)
 - **Site Web** : [En devloppement ( Preview Avalable Here) ](https://3mfa.vercel.app/)
