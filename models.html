@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product Details | 3MFA</title>
-   <link rel="stylesheet" href="about.css" />
-   <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
+    <title>3D Models | 3MFA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="models.css">
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
   </head>
   <body>
     <header>
@@ -29,6 +31,7 @@
       </button>
       <a href="/contact.html" ><button class="button-contact-us">Contact Us</button></a>
       <div class="overlay">
+        
         <ul>
           <li><a href="/index.html">Home</a></li>
           <li><a href="/products.html">Products</a></li>
@@ -44,13 +47,18 @@
         </ul>
       </div>
     </header>
-    <div class="container" style="padding-top: 10rem;">
-        <h1 style="position:absolute; top: 30%;">3MFA</h1>
-        <h2 style="position:absolute; top: 45%;">who are we?</h2>
-        <h3 style="position:absolute; top: 50%;">We are a team of designers, engineers, and makers who are passionate about <br>
-          creating innovative and sustainable products.</h3>
+    
+    <div class="flex flex-row items-center justify-center">
+      <h1 >Find a model</h1>
     </div>
 
-    <script src="about.js"></script>
+    <main class="flex flex-col items-center justify-center">
+      <div class="container mx-auto">
+        <div id="models-grid" class="grid gap-10 mt-3 pb-10">
+        </div>
+      </div>
+    </main>
+
+    <script src="models.js"></script>
   </body>
 </html>

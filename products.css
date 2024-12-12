@@ -263,6 +263,17 @@ h1 {font-size: 12vh; /* Adjust font size for mobile */
      font-family: "Jersey 10", sans-serif;
      font-weight: 400;
     }
+    p {
+      font-size: 1.6rem; /* Adjusted for smaller screens */
+      
+      color: #c7c7c7;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      padding: 10px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+    }
 /* Media Queries for Mobile */
 @media only screen and (max-width: 600px) {
   .nav-bar {
