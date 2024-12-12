@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Models | 3MFA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="models.css">
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="/assets/favicon.svg" href ="/index.html" alt="Logo" />
+        <a href="/index.html">3MFA</a>
+      </div>
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/products.html">Products</a></li>
+          <li><a href="https://3mfa.webhop.me/">Print</a></li>
+          <li><a href="/models.html">Models</a></li>
+          <li><a href="/about.html">About US</a></li>
+        </ul>
+      </nav>
+      <button class="menu-button" id="menu-button">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+      <a href="/contact.html" ><button class="button-contact-us">Contact Us</button></a>
+      <div class="overlay">
+        
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/products.html">Products</a></li>
+          <li><a href="https://3mfa.webhop.me/">Print</a></li>
+          <li><a href="/models.html">Models</a></li>
+          <li><a href="/about.html">About US</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+          <footer style="position: fixed; bottom: 0;">
+            <p>&copy; 2023 3MFA</p>
+            <a href="https://github.com/G0ldsand01/3MFA" class="link-github" > 
+            <img src="assets/github.svg"  class="logo-github" alt="Visit GitHub Project">Visit GitHub Project </a>
+          </footer>
+        </ul>
+      </div>
+    </header>
+    
+    <div class="flex flex-row items-center justify-center">
+      <h1 >Find a model</h1>
+    </div>
+
+    <main class="flex flex-col items-center justify-center">
+      <div class="container mx-auto">
+        <div id="models-grid" class="grid gap-10 mt-3 pb-10">
+        </div>
+      </div>
+    </main>
+
+    <script src="models.js"></script>
+  </body>
+</html>
