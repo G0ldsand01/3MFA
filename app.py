@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 import random
 import string
 import trimesh  # For STL file analysis
+import json
 
 # Load environment variables
 load_dotenv()

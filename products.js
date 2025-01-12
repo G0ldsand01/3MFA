@@ -185,7 +185,6 @@ document.addEventListener("DOMContentLoaded", () => {
     
 
     const productGrid = document.getElementById("product-grid");
-
     Object.values(products).forEach((product) => {
       const productCard = document.createElement("div");
       productCard.className = "product-card";

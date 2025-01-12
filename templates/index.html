@@ -15,10 +15,11 @@
         margin-top: 5em;
         color: #e8e9eb;
       }
+      
 
       .forms {
         width: 80%;
-        max-width: 8  00px;
+        max-width: 800px;
         background-color: #fff;
         padding: 2em;
         border-radius: 8px;
@@ -80,7 +81,7 @@
         transition: all 0.3s ease;
         border-radius: 0.5em;
       }
-
+      
       .container {
         display: flex;
         flex-direction: column;
@@ -109,7 +110,7 @@
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.3); 
+        border: 1px solid rgba(255, 255, 255, 0.3);
       }
       * {
         margin: 0;
@@ -280,13 +281,136 @@
         color: #2e8adb;
         text-decoration: underline;
       }
+      input {
+        width: 100%;
+        padding: 0.8em;
+        margin-bottom: 1em;
+        border: none;
+        border-radius: 0.5em;
+        font-size: 1em;
+        box-sizing: border-box;
+        background: #6c6c6d7f;
+        color: #ffffff;
+      }
+      input[type="file"] {
+        padding: 0.5em;
+      }
+      input[type="range"] {
+        width: 100%;
+        height: 1.5em;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        }
+      input[type="submit"],
+      button[type="submit"] {
+        background-color: #2e8adb;
+        color: #fff;
+        padding: 0.8em 1.5em;
+        border: none;
+        border-radius: 0.5em;
+        font-size: 1.2em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      input[type="submit"]:hover,
+      button[type="submit"]:hover {
+        border: solid 1px #357dbc;
+        background-color: #1f6fb4;
+        transition: all 0.3s ease;
+      }
+      button[type="submit"] {
+        
+        padding: 1em;
+        font-size: 1.2em;
+        color: #e8e9eb;
+        background-color: #2e8adb;
+        border: solid 1px #357dbc;
+        transition: all 0.3s ease;
+        border-radius: 0.5em;
+      }
+      .form-step {
+        display: none;
+        
+      }
+      .form-step-active {
+        display: block;
+      }
+      .navigation-buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 1em;
+      }
+      .next-step {
+        background-color: #2e8adb;
+        color: white;
+        padding: 0.8em 1.5em 0.8em 1.5em;
+        border: none;
+        border-radius: 0.5em;
+        font-size: 1.2em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        width: 50%;
+        margin-left: 28%;
+      }
+      .next-step:hover {
+        background-color: #1f6fb4;
+        transition: all 0.3s ease;
+      }
+      .prev-step {
+        background-color: #2e8adb;
+        color: white;
+        padding: 0.8em 1.5em 0.8em 1.5em;
+        border: none;
+        border-radius: 0.5em;
+        font-size: 1.2em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 28%;
+        width: 50%;
+      }
+      .prev-step:hover {
+        background-color: #1f6fb4;
+        transition: all 0.3s ease;
+      }
+      .next-step:active,
+      .prev-step:active {
+        background-color: #1e5e80;
+      }
+      .submit-button {
+        background-color: #2e8adb;
+        color: white;
+        padding: 0.8em 1.5em;
+        border: none;
+        border-radius: 0.5em;
+        font-size: 1.2em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-left: 28%;
+        width: 50%;
+      }
+      .submit-button:hover {
+        border: solid 1px #357dbc;
+        background-color: #1f6fb4;
+        transition: all 0.3s ease;
+      }
       #stl-viewer {
         width: 100%;
         height: 400px;
-        border: 1px solid #ccc;
         background-color: #f0f0f0; /* Couleur d'arrière-plan claire */
+        display: none;
       }
-
       @media only screen and (max-width: 1000px) {
         .nav-bar {
           display: none;
@@ -332,7 +456,6 @@
       <div class="logo">
         <img
           src="https://raw.githubusercontent.com/G0ldsand01/3MFA/9e673222036d8fd851043edd40cb6c8ec9209816/assets/favicon.svg"
-          href="/index.html"
           alt="Logo"
         />
         <a href="https://3mfa.vercel.app/index.html">3MFA</a>
@@ -342,7 +465,8 @@
           <li><a href="https://3mfa.vercel.app/index.html">Home</a></li>
           <li><a href="https://3mfa.vercel.app/products.html">Products</a></li>
           <li><a href="https://3mfa.webhop.me/">Print</a></li>
-          <li><a href="https://3mfa.vercel.app/about.html">About US</a></li>
+          <li><a href="https://3mfa.vercel.app/models.html">Models</a></li>
+          <li><a href="https://3mfa.vercel.app/about.html">About Us</a></li>
         </ul>
       </nav>
       <button class="menu-button" id="menu-button">
@@ -350,201 +474,354 @@
         <div></div>
         <div></div>
       </button>
-      <a href="https://3mfa.vercel.app/contact.html"
-        ><button class="button-contact-us">Contact Us</button></a
-      >
+      <a href="https://3mfa.vercel.app/contact.html">
+        <button class="button-contact-us">Contact Us</button>
+      </a>
       <div class="overlay">
         <ul>
           <li><a href="https://3mfa.vercel.app/index.html">Home</a></li>
           <li><a href="https://3mfa.vercel.app/products.html">Products</a></li>
           <li><a href="https://3mfa.webhop.me/">Print</a></li>
-          <li><a href="https://3mfa.vercel.app/about.html">About US</a></li>
+          <li><a href="https://3mfa.vercel.app/models.html">Models</a></li>
+          <li><a href="https://3mfa.vercel.app/about.html">About Us</a></li>
           <li><a href="https://3mfa.vercel.app/contact.html">Contact Us</a></li>
-          <footer style="position: fixed; bottom: 0">
-            <p>&copy; 2023 3MFA</p>
-            <a href="https://github.com/G0ldsand01/3MFA" class="link-github">
-              <img
-                src="https://raw.githubusercontent.com/G0ldsand01/3MFA/9e673222036d8fd851043edd40cb6c8ec9209816/assets/github.svg"
-                class="logo-github"
-                alt="Visit GitHub Project"
-              />Visit GitHub Project
-            </a>
-          </footer>
         </ul>
       </div>
     </header>
     <div class="container">
-      <h1>Custom 3D Print Order</h1>
+      <h1>Custom 3D Print Order (Beta)</h1>
       <div class="forms">
+        <div class="alerte" id="alerte_box">
+          <h1 id="alerte" style="color: red; text-align: center; margin-top: 20px;"></h1>
+        </div>
+        
         <form action="/order" method="post" enctype="multipart/form-data">
-          <label for="first_name">First Name:</label>
-          <input type="text" id="first_name" name="first_name" required /><br />
-          <label for="last_name">Last Name:</label>
-          <input type="text" id="last_name" name="last_name" required /><br />
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required /><br />
-          <label for="street_number">Address:</label>
-          <input
-            type="text"
-            id="street_number"
-            name="street_number"
-            required
-          /><br />
-          <label for="city">City:</label>
-          <input type="text" id="city" name="city" required /><br />
-          <label for="postal_code">Postal Code:</label>
-          <input
-            type="text"
-            id="postal_code"
-            name="postal_code"
-            required
-          /><br />
-          <label for="province">Province:</label>
-          <input type="text" id="province" name="province" required /><br />
-          <label for="country">Country:</label>
-          <input type="text" id="country" name="country" required /><br />
-          <label for="stl_file">Upload STL File:</label>
-          <input type="file" id="stl_file" name="stl_file" required /><br />
-          <div id="viewer-container"></div>
-          <label> Print quality:</label>
-          <select name="quality" id="quality" value="0">
-            <option value="1">Normal</option>
-            <option value="0">Draft</option>
-            <option value="2">Fine</option>
-            <option value="3">Ultra Fine</option>
-          </select>
-          <label for="material">Material (PLA/ABS/PETG):</label>
-          <select name="material" id="material">
-            <option value="PLA">PLA</option>
-            <option value="PETG">PETG</option>
-            <option value="Carbon Fiber">PETG-CF</option>
-            <option value="ABS">ABS</option>
-            <option value="TPU">TPU</option>
-          </select>
-          <label for="color">Color:</label>
-          <select name="color" id="color">
-            <option value="white">White</option>
-            <option value="black">Black</option>
-            <option value="red">Red</option>
-            <option value="blue">Blue</option>
-            <option value="green">Green</option>
-            <option value="yellow">Yellow</option>
-            <option value="orange">Orange</option>
-            <option value="purple">Purple</option>
-            <option value="brown">Brown</option>
-            <option value="pink">Pink</option>
-            <option value="gray">Gray</option>
-          </select>
-          <label for="infill" id="infilltext">Infill Level (0-100%):</label>
-          <select name="infill" id="infill">
-            <option value="15">15% (Default)</option>
-            <option value="10">10%</option>
-            <option value="15">15%</option>
-            <option value="20">20%</option>
-            <option value="30">30%</option>
-            <option value="40">40%</option>
-            <option value="50">50%</option>
-            <option value="60">60%</option>
-            <option value="70">70%</option>
-            <option value="80">80%</option>
-            <option value="90">90%</option>
-            <option value="100">100%</option></select
-          ><br />
-          <label id="scale_title"
-            >Scaling: <span id="scale_value">100%</span></label
-          >
-          <input type="range"id="scale"name="scale"min="0"max="10000"value="100"/>
+          <!-- Step 1 -->
+          <div class="form-step form-step-active">
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" required />
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" required />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            <div class="navigation-buttons">
+              <button type="button" class="next-step">Next</button>
+            </div>
+          </div>
 
-          <button type="submit">Submit Order</button>
+          <!-- Step 2 -->
+          <div class="form-step">
+            <label for="street_number">Address:</label>
+            <input
+              type="text"
+              id="street_number"
+              name="street_number"
+              required
+            />
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required />
+            <label for="postal_code">Postal Code:</label>
+            <input type="text" id="postal_code" name="postal_code" required />
+            <label for="province">Province/State:</label>
+            <input type="text" id="province" name="province" required />
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required />
+            <div class="navigation-buttons">
+              <button type="button" class="prev-step">Previous</button>
+              <button type="button" class="next-step">Next</button>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="form-step">
+            <label for="stl_file">Upload your STL file:</label>
+            <input
+              type="file"
+              id="stl_file"
+              name="stl_file"
+              class="file-input"
+              accept=".stl"
+              style="background-color: #2e8adb; color: #fff; padding: 0.8em 1.5em; border: none; border-radius: 0.5em; font-size: 1em; box-sizing: border-box; background: #6c6c6d7f;"
+              required
+            />
+
+            <div class="navigation-buttons">
+              <button type="button" class="prev-step">Previous</button>
+              <button type="button" class="next-step">Next</button>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="form-step">
+            <label for="material">Material:</label>
+            <select id="material" name="material" required>
+              <option value="PLA">PLA</option>
+              <option value="ABS">ABS</option>
+              <option value="TPU">TPU</option>
+              <option value="PETG">PETG</option>
+              <option value="Carbon Fiber">Carbon Fiber</option>
+            </select>
+            <label for="color">Color:</label>
+            <select id="color" name="color" value="0xffffff" required>
+              <option value="0xffffff">White</option>
+              <option value="0x000000">Black</option>
+              <option value="0x808080">Gray</option>
+            </select>
+            <label for="infill" id="infill-label">Infill Level (%): 15%</label>
+            <input type="range" id="infillslider" name="infill" min="0" max="100"  value="15"required/>
+            <label for="quality">Quality:</label>
+            <select id="quality" name="quality" required>
+              <option value="1">Low</option>
+              <option value="2">Medium</option>
+              <option value="3">High</option>
+            </select>
+            <label for="scale" id="scalelabel">Scaling (%):  100%</label>
+            <input for="scale" type="text" id="scaletext" name="scale" placeholder="100%" required/> 
+            <input
+              type="range"
+              id="scaleslider"
+              name="scale"
+              min="1"
+              max="10000"
+              value="100"
+            />
+           
+            <div class="navigation-buttons">
+              <button type="button" class="prev-step">Previous</button>
+              <input type="submit" class="submit-button" value="Submit" />
+            </div>
+          </div>
+          <p id="size-warning" style="color: 0xfff; position: relative; left: 25%; justify-items: center; margin: 32px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold;"></p>
+          <div id="stl-viewer" style="width: 100%; height: 400px; border: none;"></div>
         </form>
+        
       </div>
-    </div>
-  </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/STLLoader.js"></script>
-  <script>
-    // Elements for the scaling slider and display
-    const scaleInput = document.getElementById("scale");
-    const scaleValueDisplay = document.getElementById("scale_value");
+    </div>   
+    <script src="https://cdn.jsdelivr.net/npm/three@latest/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@latest/examples/js/loaders/STLLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@latest/examples/js/controls/OrbitControls.js"></script>
+    <script>
+      // Get sliders value and set to labels 
+      const infillSlider = document.getElementById("infillslider");
+      const scaleSlider = document.getElementById("scaleslider");
+      const infillLabel = document.getElementById("infill-label");
+      const scaleLabel = document.getElementById("scalelabel");
+      const scaleText = document.getElementById("scaletext");
 
-    // Update the displayed value dynamically as the user adjusts the slider
-    scaleInput.addEventListener("input", () => {
-      scaleValueDisplay.textContent = scaleInput.value + "%";
-    });
-
-    // Initialize the displayed scaling value to match the slider's default
-    scaleValueDisplay.textContent = scaleInput.value + "%";
-
-    // Elements for the infill slider and label
-    const infillSlider = document.getElementById("infill");
-    const infillLabel = document.getElementById("infilltext");
-
-    // Update infill level dynamically
-    infillSlider.addEventListener("input", () => {
-      infillLabel.innerHTML =
-        "Infill Level (0-100%): " + infillSlider.value + "%";
-    });
-
-    // Initialize the infill label with the slider's default value
-    infillLabel.innerHTML =
-      "Infill Level (0-100%): " + infillSlider.value + "%";
-
-    // Menu button toggle functionality for small screens
-    document.addEventListener("DOMContentLoaded", () => {
-      const menuButton = document.getElementById("menu-button");
-      const overlay = document.querySelector(".overlay");
-
-      menuButton.addEventListener("click", () => {
-        overlay.classList.toggle("overlay--active");
-        menuButton.classList.toggle("active");
+      // Update infill label dynamically
+      infillSlider.addEventListener("input", () => {
+        infillLabel.textContent = `Infill: ${infillSlider.value} %`;
       });
-    });
 
-    const fileInput = document.getElementById("stl_file");
-    const viewerContainer = document.getElementById("stl-viewer");
-    let scene, camera, renderer;
+      // Update scale label and model scale when slider is moved
+      scaleSlider.addEventListener("input", () => {
+        scaleLabel.textContent = `Scaling: ${scaleSlider.value} %`;
+        scaleText.value = scaleSlider.value; // Update the text input value to match the slider value
+        updateModelScale(scaleSlider.value);
+      });
 
-    function initViewer() {
-      const width = viewerContainer.clientWidth;
-      const height = viewerContainer.clientHeight;
+      // Update scale label and model scale when text input is changed
+      scaleText.addEventListener("input", () => {
+        const value = Math.min(Math.max(scaleText.value, 0), 10000); // Ensure value is between 0 and 10000
+        scaleText.value = value; // Update the text input value to be within bounds
+        scaleLabel.textContent = `Scaling: ${value} %`;
+        scaleSlider.value = value; // Update the slider value to match the text input
+        updateModelScale(value);
+      });
 
-      scene = new THREE.Scene();
-      camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
-      renderer = new THREE.WebGLRenderer({ antialias: true });
-      renderer.setSize(width, height);
-      viewerContainer.appendChild(renderer.domElement);
-
-      const light = new THREE.DirectionalLight(0xffffff, 1);
-      light.position.set(1, 1, 1).normalize();
-      scene.add(light);
-
-      camera.position.z = 5;
-      animate();
-    }
-
-    function animate() {
-      requestAnimationFrame(animate);
-      renderer.render(scene, camera);
-    }
-
-    function loadSTL(file) {
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        const loader = new THREE.STLLoader();
-        const geometry = loader.parse(e.target.result);
-        const material = new THREE.MeshStandardMaterial({ color: 0x0077ff });
-        const mesh = new THREE.Mesh(geometry, material);
-        scene.add(mesh);
-      };
-      reader.readAsArrayBuffer(file);
-    }
-
-    fileInput.addEventListener("change", (event) => {
-      const file = event.target.files[0];
-      if (file) {
-        initViewer();
-        loadSTL(file);
+      // Function to update the model scale
+      function updateModelScale(value) {
+        if (model) {
+          const scale = value / 100; // Convert to a scale factor
+          model.scale.set(scale, scale, scale); // Update model scale
+          console.log(model.scale);
+        }
       }
-    });
-  </script>
+    </script>
+
+    <script>
+      const steps = document.querySelectorAll(".form-step");
+      const nextButtons = document.querySelectorAll(".next-step");
+      const prevButtons = document.querySelectorAll(".prev-step");
+      const fileInput = document.getElementById("stl_file");
+      const colorInput = document.getElementById("color");
+      const viewer = document.getElementById("stl-viewer");
+      let currentStep = 0;
+      let model;
+      let bed;
+      let materialColor = 0xffffff; // Default color (white)
+
+      const updateStep = () => {
+        steps.forEach((step, index) => {
+          step.classList.toggle("form-step-active", index === currentStep);
+        });
+      };
+
+      nextButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          // Check if all required fields are filled before proceeding
+          const currentForm = steps[currentStep];
+          const inputs = currentForm.querySelectorAll("input[required], select[required]");
+          const allFieldsFilled = Array.from(inputs).every(input => input.value.trim() !== "");
+          document.getElementById("alerte").innerHTML = "";
+         
+          if (allFieldsFilled) {
+            currentStep++;
+            updateStep();
+            document.getElementById("alerte").innerHTML = "";
+          }
+          else {
+            document.getElementById("alerte_box").style.display = "block";
+            document.getElementById("alerte_box").style.padding = "2em";
+            document.getElementById("alerte_box").style.borderRadius = "8px";
+            
+            document.getElementById("alerte_box").style.marginBottom = "2em";
+            document.getElementById("alerte").innerHTML = "Please fill all required fields.";
+          }
+        });
+      });
+
+      prevButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          currentStep--;
+          updateStep();
+        });
+      });
+
+      // Update the color when the user selects a new one
+      colorInput.addEventListener("change", (event) => {
+        materialColor = parseInt(event.target.value, 16); // Get color in hex format
+        if (model) {
+          model.traverse((child) => {
+            if (child.isMesh) {
+              child.material.color.setHex(materialColor); // Change model color
+            }
+          });
+        }
+      });
+
+      // Show STL viewer and render model
+      fileInput.addEventListener("change", () => {
+        if (fileInput.files.length > 0) {
+          viewer.style.display = "block";
+          const file = fileInput.files[0];
+          const reader = new FileReader();
+          reader.onload = (event) => {
+            const contents = event.target.result;
+
+            // Initialize Three.js
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, viewer.offsetWidth / viewer.offsetHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(viewer.offsetWidth, viewer.offsetHeight);
+            viewer.innerHTML = ''; // Clear previous viewer content
+            viewer.appendChild(renderer.domElement);
+
+            // Set up OrbitControls to enable camera movement
+            const controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+            // Load STL file
+            const loader = new THREE.STLLoader();
+            const geometry = loader.parse(contents);
+
+            // Create a mesh for the model and add it to the scene
+            const material = new THREE.MeshStandardMaterial({ color: materialColor });
+            model = new THREE.Mesh(geometry, material);
+
+            // Create a bed for the model and add it to the scene 
+            if (bed) {
+              scene.remove(bed); // Remove previous bed if it exists
+            }
+            bed = new THREE.Mesh(
+              new THREE.BoxGeometry(256, 10, 256),  // Bed size
+              new THREE.MeshBasicMaterial({ color: 0xcdac6e, opacity: 0.5, transparent: false, wireframe: false }),
+            );
+
+            // Calculate the bounding box of the model
+            const boundingBox = new THREE.Box3().setFromObject(model);
+            const center = boundingBox.getCenter(new THREE.Vector3());
+            const size = boundingBox.getSize(new THREE.Vector3());
+
+            // Check if the model has a flat face
+            const flatFaceThreshold = 0.001; // Define a threshold for flatness
+            let isFlat = false;
+
+            // Check the vertices of the geometry for flat faces
+            const vertices = geometry.attributes.position.array;
+            for (let i = 0; i < vertices.length; i += 3) {
+              const z1 = vertices[i + 2];
+              const z2 = vertices[i + 5];
+              const z3 = vertices[i + 8];
+
+              // Check if the z-coordinates are approximately equal
+              if (Math.abs(z1 - z2) < flatFaceThreshold && Math.abs(z2 - z3) < flatFaceThreshold) {
+                isFlat = true;
+                break;
+              }
+            }
+
+            // Define the maximum and optimal bed sizes
+            const maxBuildSize = new THREE.Vector3(256, 256, 256); // Max bed dimensions
+            const optimalSize = new THREE.Vector3(180, 180, 180); // Optimal bed dimensions
+
+            // Check if the model exceeds the bed size
+            if (size.x > maxBuildSize.x || size.y > maxBuildSize.y || size.z > maxBuildSize.z) {
+              // Calculate the scale factor to fit the model within the bed size
+              const scaleX = maxBuildSize.x / size.x;
+              const scaleY = maxBuildSize.y / size.y;
+              const scaleZ = maxBuildSize.z / size.z;
+              const scale = Math.min(scaleX, scaleY, scaleZ);
+
+              // Alert the user and scale the model
+              document.getElementById ("size-warning").innerHTML = "The model exceeds the maximum bed size. It will be scaled down to fit.";
+              model.scale.set(scale, scale, scale);
+            } else {
+              // Check if the model is within the optimal size
+              if (size.x <= optimalSize.x && size.y <= optimalSize.y && size.z <= optimalSize.z) {
+                document.getElementById("size-warning").innerHTML = "The model is within the optimal size for printing.";
+              }
+            }
+
+            // Check if the model's scale exceeds a default value (e.g., 1.0)
+            const defaultScale = 1.0;
+            if (model.scale.x > defaultScale || model.scale.y > defaultScale || model.scale.z > defaultScale) {
+              document.getElementById("size-warning").innerHTML = "The model's scale exceeds the default value. Please adjust the scale.";
+            }
+
+            // Position the model
+            if (isFlat) {
+              model.position.set(-center.x, -boundingBox.min.y, -center.z); // Center and lay flat
+            } else {
+              model.position.set(-center.x, 0, -center.z); // Center but not flat
+            }
+
+            // Add the model and bed to the scene
+            scene.add(model);
+            scene.add(bed);
+
+            // Adjust the camera to focus on the model
+            camera.position.set(center.x, center.y + 200, center.z + 200);  // Position camera dynamically
+            controls.target.copy(center); // Focus camera on the center of the model
+
+            // Set up lighting
+            const light = new THREE.AmbientLight(0x404040);  // Ambient light
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 1);  // Directional light
+            directionalLight.position.set(0, 1, 1).normalize();
+            scene.add(light);
+            scene.add(directionalLight);
+
+            // Animation loop
+            const animate = function () {
+              requestAnimationFrame(animate);
+              controls.update(); // Update controls
+              renderer.render(scene, camera);
+            };
+            animate();
+          };
+          
+          reader.readAsArrayBuffer(file);
+        }
+      });
+    </script>
+  </body>
 </html>
