@@ -127,6 +127,7 @@ def order():
             f.write(f"Infill Level: {infill}%\n")
             f.write(f"Scale: {scale * 100:.0f}%\n")
             f.write(f"Cost: {cost:.2f} {currency}\n")
+            print ("Order Have complete with Number : ", order_number)
             if needs_a1_mini:
                 f.write(f"Can be Printed on A1 Mini: True\n")
             else:
