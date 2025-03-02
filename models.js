@@ -195,13 +195,3 @@ if (!productGrid) {
   });
 }
 
-// Gestion d'un élément parent arbitraire (corrigé)
-const parentElement = document.getElementById("someId");
-
-if (parentElement) {
-  const newElement = document.createElement("div");
-  newElement.textContent = "Nouvel élément ajouté dynamiquement.";
-  parentElement.appendChild(newElement);
-} else {
-  console.error("Parent element 'someId' not found!");
-}

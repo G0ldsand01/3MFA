@@ -115,7 +115,7 @@
         price: 10,
       },
       9: {
-        id: 5,
+        id: 9,
         name: "Product 9",
         url: "/products/9",
         description: "A small figurine to decorate your desk.9",
@@ -174,18 +174,20 @@
     
     
 
-    const productGrid = document.getElementById("product-grid");
-    Object.values(products).forEach((product) => {
-      const productCard = document.createElement("div");
-      productCard.className = "product-card";
-      productCard.innerHTML = `
-            <a href="product.html?id=${product.id}" style="text-decoration: none;" class="mt-4 text-blue-500 hover:underline">
-                <img src="${product.image}" alt="${product.name}" style="border-radius" class="w-full h-auto object-cover rounded-t" />
-                <div class="p-4">
-                    <h2 class="mt-4 text-xl font-semibold" style="font-size: 1.5rem; padding-top: 2%;">${product.name}</h2>
-                    <p class="text-gray-600">${product.description}</p>
-                </div>
-            </a>
-            `;
-      productGrid.appendChild(productCard);
+    document.addEventListener("DOMContentLoaded", () => {
+      const productGrid = document.getElementById("product-grid");
+      Object.values(products).forEach((product) => {
+        const productCard = document.createElement("div");
+        productCard.className = "product-card";
+        productCard.innerHTML = `
+              <a href="product.html?id=${product.id}" style="text-decoration: none;" class="mt-4 text-blue-500 hover:underline">
+                  <img src="${product.image}" alt="${product.name}" style="border-radius" class="w-full h-auto object-cover rounded-t" />
+                  <div class="p-4">
+                      <h2 class="mt-4 text-xl font-semibold" style="font-size: 1.5rem; padding-top: 2%;">${product.name}</h2>
+                      <p class="text-gray-600">${product.description}</p>
+                  </div>
+              </a>
+              `;
+        productGrid.appendChild(productCard);
+      });
     });
