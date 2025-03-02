@@ -6,6 +6,9 @@
     <title>Product Details | 3MFA</title>
     <link rel="stylesheet" href="product.css" />
     <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+    <script src="/assets/js/navbar.js"></script>
+    <script src="/assets/js/cart.js"></script>
   </head>
   <body>
     <style>
@@ -48,76 +51,106 @@
     </style>
     <header>
       <div class="logo">
-        <img src="/assets/favicon.svg" href ="/index.html" alt="Logo" />
+        <img src="/assets/favicon.svg" alt="Logo" onclick="location.href='/index.html'" style="cursor: pointer;" />
         <a href="/index.html">3MFA</a>
       </div>
-      <nav class="nav-bar">
+      <nav>
         <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/products.html">Products</a></li>
-          <li><a href="https://3mfa.webhop.me/">Print</a></li>
-          <li><a href="/models.html">Models</a></li>
-          <li><a href="/about.html">About US</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="models.html">Models</a></li>
+          <li><a href="https://3mfa.webhop.me">Print</a></li>
+          <li><a href="about.html">About Us</a></li>
         </ul>
       </nav>
-      <button class="menu-button" id="menu-button">
-        <div></div>
-        <div></div>
-        <div></div>
+      <!-- Auth Buttons or Profile Section -->
+      <div id="auth-buttons" class="login" style="list-style: none">
+        <li>
+          <a href="login.html" style="margin-left: 1em; margin-right: 1em"
+            >Login</a
+          >
+          <a href="register.html" style="margin-left: 1em; margin-right: 1em">
+            <button style="display: inline-block; flex-direction: row">
+              Register
+            </button>
+          </a>
+          <a href="cart.html" id="cart-link" style="position: relative; display: inline-block;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag">
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
+              <path d="M3 6h18"/>
+              <path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+            <span id="cart-count" style="position: absolute; top: -5px; right: -5px; background: rgb(247, 247, 247); color: rgb(0, 0, 0); font-size: 12px; width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; border-radius: 50%;">0</span>
+          </a>
+        </li>
+      </div>
+      <!-- Profile Section - hidden by default -->
+      <div id="profile-section" style="display: none">
+        <img
+          id="profile-picture"
+          src=""
+          alt="Profile Picture"
+          width="40"
+          height="40"
+        />
+        <button id="logout-btn">Logout</button>
+      </div>
+      <button class="menu-toggle" style="z-index: 991">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="none"
+          stroke="#E7DCDC"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="6" x2="20" y2="6" />
+          <line x1="4" y1="18" x2="20" y2="18" />
+        </svg>
       </button>
-      <a href="/contact.html" ><button class="button-contact-us">Contact Us</button></a>
-      <div class="overlay">
-        
+      <nav class="overlay-nav">
+        <button class="close-menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="48"
+            height="48"
+            fill="none"
+            stroke="#E7DCDC"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
         <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/products.html">Products</a></li>
-          <li><a href="https://3mfa.webhop.me/">Print</a></li>
-          <li><a href="/models.html">Models</a></li>
-          <li><a href="/about.html">About US</a></li>
-          <li><a href="/contact.html">Contact Us</a></li>
-          <footer style="position: fixed; bottom: 0;">
-            <p>&copy; 2023 3MFA</p>
-            <a href="https://github.com/G0ldsand01/3MFA" class="link-github" > 
-            <img src="assets/github.svg"  class="logo-github" alt="Visit GitHub Project">Visit GitHub Project </a>
-          </footer>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="models.html">Models</a></li>
+          <li><a href="https://3mfa.webhop.me">Print</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="cart.html" id="cart-link" style="position: relative; display: inline-block;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag">
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
+              <path d="M3 6h18"/>
+              <path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+            <span id="cart-count" style="position: absolute; top: -5px; right: -5px; background: rgb(247, 247, 247); color: rgb(0, 0, 0); font-size: 12px; width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; border-radius: 50%;">0</span>
+          </a></li>
         </ul>
-      </div>
+      </nav>
     </header>
-    <div class="container" style="padding-top: 10rem; padding-bottom: 10rem">
-      <h1 id="product-name"></h1>
-      <img id="product-image" src="" alt="Product Image" />
-      <p class="description" id="product-description"></p>
-      <div class="back_button">
-        <a href="/models.html" class="back-link"><button>Back to Models</button></a>
-      <a href="/products.html" class="back-link"><button>Back to Products</button></a>
-      </div>
-      
-      <br />
-      <div class="download" style="display: flex; flex-direction: column; align-items: center; margin-top: 5%; padding: 2%; background-color: #4e4e4e67; border-radius: 25px;">
-        <img id="preview" href="" style="width: 30%; height: 5%; border-radius: 20px" src="" alt="Product Preview" />
-        <span id="file-name"></span> 
-        <span id="model-link" style="margin-top: 10px;">
-          <a id="model_link" href="" target="_blank" rel="noopener noreferrer" style="cursor: pointer;">
-            <button class="button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-box"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
-              <p class="text" id="model-text" style="cursor: pointer;">Model</p>
-            </button>
-          </a>
-        </span>
-        <div class="action-button" style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px; cursor: pointer;" >
-          <a id="download-button" class="download-button" download href="" id="download-button">Download STL</a>
-          <a href="" id="buy_link" target="_blank" rel="noopener noreferrer" style="cursor: pointer;">
-            <button class="button">
-              <svg viewBox="0 0 16 16" class="bi bi-cart-check" height="24" width="24" xmlns="http://www.w3.org/2000/svg" fill="#fff">
-                <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"></path>
-                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
-              </svg>
-              <p class="text" id="buy-text" style="cursor: pointer;">Buy Now</p>
-            </button>
-          </a>
-        </div>
-      </div>
-      
+    
+    <div id="product-details">
+    </div>
+
     <script src="model.js"></script>
   </body>
 </html>

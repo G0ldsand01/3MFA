@@ -1,16 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const menuButton = document.getElementById("menu-button");
-  const overlay = document.querySelector(".overlay");
-
-  menuButton.addEventListener("click", () => {
-    overlay.classList.toggle("overlay--active");
-    menuButton.classList.toggle("active");
-  });
-});
-
-const products = {
-  1: {
-    id: 1,
+const models = {
+  300: {
+    id: 300,
     name: "Product 1",
     url: "/models/1",
     description: "A small figurine to decorate your desk.",
@@ -21,10 +11,10 @@ const products = {
     model_link: "https://www.thingiverse.com/thing:6688083",
     model_author: "tosse52",
     model_source: "Thingiverse",
-    price: "3.00$",
+    price: 3,
   },
-  2: {
-    id: 2,
+  301: {
+    id: 301,
     name: "Pumpkin Spider Model by Mr. Purple",
     url: "/models/2",
     description: "A small figurine to decorate your desk.",
@@ -36,10 +26,10 @@ const products = {
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Mr. Purple",
     model_source: "Printables",
-    price: "3.00$",
+    price: 3,
   },
-  3: {
-    id: 3,
+  302: {
+    id: 302,
     name: "Simple Phone Stand Model by REDZC",
     url: "/models/3",
     description: "Easy printable phone stand that can be printed without support.",
@@ -51,10 +41,10 @@ const products = {
     model_author: "An0b1s",
     model_source: "Printables",
     buy_link: "https://buy.stripe.com/test_3cscO2cSS1ncgcE3cd",
-    price: "2.50$",
+    price: 3,
   },
-  4: {
-    id: 4,
+  303: {
+    id: 303,
     name: "Product 4",
     url: "/models/4",
     description: "A small figurine to decorate your desk.4",
@@ -64,11 +54,11 @@ const products = {
     model_link:"https://www.printables.com/model/1043965-cute-little-pumpkin-spider",
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Goldsand",
-    model_source: "3MFA",
-    price: "10.00$",
+    model_source: "Printables",
+    price: 3,
   },
-  5: {
-    id: 5,
+  304: {
+    id: 304,
     name: "Product 5",
     url: "/models/5",
     description: "A small figurine to decorate your desk.5",
@@ -78,11 +68,11 @@ const products = {
     model_link:"https://www.printables.com/model/1043965-cute-little-pumpkin-spider",
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Goldsand",
-    model_source: "3MFA",
-    price: "10.00$",
+    model_source: "Printables",
+    price: 3,
   },
-  6: {
-    id: 6,
+  305: {
+    id: 305,
     name: "Product 6",
     url: "/models/6",
     description: "A small figurine to decorate your desk.6",
@@ -92,11 +82,11 @@ const products = {
     model_link:"https://www.printables.com/model/1043965-cute-little-pumpkin-spider",
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Goldsand",
-    model_source: "3MFA",
-    price: "10.00$",
+    model_source: "Printables",
+    price: 3,
   },
-  7: {
-    id: 7,
+  306: {
+    id: 306,
     name: "Product 7",
     url: "/models/7",
     description: "A small figurine to decorate your desk.7",
@@ -106,11 +96,11 @@ const products = {
     model_link:"https://www.printables.com/model/1043965-cute-little-pumpkin-spider",
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Goldsand",
-    model_source: "3MFA",
-    price: "10.00$",
+    model_source: "Printables",
+    price: 3,
   },
-  8: {
-    id: 8,
+  307: {
+    id: 307,
     name: "Product 8",
     url: "/models/8",
     description: "A small figurine to decorate your desk.8",
@@ -120,11 +110,11 @@ const products = {
     model_link:"https://www.printables.com/model/1043965-cute-little-pumpkin-spider",
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Goldsand",
-    model_source: "3MFA",
-    price: "10.00$",
+    model_source: "Printables",
+    price: 3,
   },
-  9: {
-    id: 5,
+  308: {
+    id: 308,
     name: "Product 9",
     url: "/models/9",
     description: "A small figurine to decorate your desk.9",
@@ -135,10 +125,10 @@ const products = {
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Goldsand",
     model_source: "3MFA",
-    price: "10.00$",
+    price: 10,
   },
-  10: {
-    id: 10,
+  309: {
+    id: 309,
     name: "Product 10",
     url: "/models/10",
     description: "A small figurine to decorate your desk.10",
@@ -149,10 +139,10 @@ const products = {
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Mr. Purple",
     model_source: "Printables",
-    price: "3.00$",
+    price: 3,
   },
-  11: {
-    id: 11,
+  310: {
+    id: 310,
     name: "Product 11",
     url: "/models/11",
     description: "A small figurine to decorate your desk.11",
@@ -163,10 +153,10 @@ const products = {
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Mr. Purple",
     model_source: "Printables",
-    price: "3.00$",
+    price: 3,
   },
-  12: {
-    id: 12,
+  311: {
+    id: 311,
     name: "Product 12",
     url: "/models/12",
     description: "A small figurine to decorate your desk.12",
@@ -177,13 +167,18 @@ const products = {
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Mr. Purple",
     model_source: "Printables",
-    price: "3.00$",
+    price: 3,
   },
-  };
-
+};
 const productGrid = document.getElementById("models-grid");
+const parentElement = document.getElementById("someId");
+if (parentElement) {
+    parentElement.appendChild(newElement);
+} else {
+    console.error("Parent element not found!");
+}
 
-Object.values(products).forEach((product) => {
+Object.values(models).forEach((product) => {
   const productCard = document.createElement("div");
   productCard.className = "product-card";
   productCard.innerHTML = `

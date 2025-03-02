@@ -12,7 +12,7 @@ const products = {
     model_author: "An0b1s",
     model_source: "Printables",
     buy_link: "https://buy.stripe.com/test_3cscO2cSS1ncgcE3cd",
-    price: "2.50$",
+    price: 2,
   },
   2: {
     id: 2,
@@ -27,7 +27,7 @@ const products = {
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Mr. Purple",
     model_source: "Printables",
-    price: "3.00$",
+    price: 3,
   },
   3: {
     id: 3,
@@ -42,7 +42,7 @@ const products = {
     buy_link: "https://buy.stripe.com/test_7sI6pEaKKaXM1hKcMO",
     model_author: "Triple G workshop",
     model_source: "Maker World",
-    price: "10.00$",
+    price: 10,
   },
   4: {
     id: 4,
@@ -56,7 +56,7 @@ const products = {
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Goldsand",
     model_source: "3MFA",
-    price: "10.00$",
+    price: 10,
   },
   5: {
     id: 5,
@@ -70,7 +70,7 @@ const products = {
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Goldsand",
     model_source: "3MFA",
-    price: "10.00$",
+    price: 10,
   },
   6: {
     id: 6,
@@ -84,7 +84,7 @@ const products = {
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Goldsand",
     model_source: "3MFA",
-    price: "10.00$",
+    price: 10,
   },
   7: {
     id: 7,
@@ -98,7 +98,7 @@ const products = {
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Goldsand",
     model_source: "3MFA",
-    price: "10.00$",
+    price: 10,
   },
   8: {
     id: 8,
@@ -112,7 +112,7 @@ const products = {
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Goldsand",
     model_source: "3MFA",
-    price: "10.00$",
+    price: 10,
   },
   9: {
     id: 5,
@@ -126,7 +126,7 @@ const products = {
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Goldsand",
     model_source: "3MFA",
-    price: "10.00$",
+    price: 10,
   },
   10: {
     id: 10,
@@ -140,7 +140,7 @@ const products = {
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Mr. Purple",
     model_source: "Printables",
-    price: "3.00$",
+    price: 3,
   },
   11: {
     id: 11,
@@ -154,7 +154,7 @@ const products = {
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Mr. Purple",
     model_source: "Printables",
-    price: "3.00$",
+    price: 3,
   },
   12: {
     id: 12,
@@ -168,47 +168,46 @@ const products = {
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Mr. Purple",
     model_source: "Printables",
-    price: "3.00$",
+    price: 3,
   },
   };
-function getProductId() {
-  const params = new URLSearchParams(window.location.search);
-  return params.get("id");
+  
+  
+
+const productGrid = document.getElementById("product-details");
+
+// Get product ID from URL
+const urlParams = new URLSearchParams(window.location.search);
+const productId = parseInt(urlParams.get("id"));
+
+if (productId && products[productId]) {
+    const product = products[productId];
+
+    const productElement = document.createElement("div");
+    productElement.classList.add("product");
+    productElement.innerHTML = `
+        
+            <img src="${product.image}" alt="${product.name}">
+        <div class="product-info">
+            <h3>${product.name}</h3>
+            <p>${product.description}</p>
+            <div class="product-price">
+                <span class="product-price-currency">$</span>
+                <span class="product-price-amount">${product.price.toFixed(2)}</span>
+            </div>
+            <button class="product-link-button" id="model_link" onclick="window.location.href='${product.model_link}'" target="_blank">View original model on ${product.model_source} by ${product.model_author}</button>
+            <button class="product-link-button"  id="add-to-cart-btn" onclick="cart.addItem(${productId})">Add to cart</button>
+            <button class="product-link-button" id="print_link" onclick="window.location.href='${product.stl}'">Download: ${product.file_name}</button>
+            <button class="product-link-button" style"text-decoration: none; display: inline-block; margin-top: 1rem; display: flex; justify-content: center; align-items: center; position: relative;" onclick="window.location.href='${product.buy_link}'" target="_blank">Buy now</button>
+            
+        </div>
+    `;
+    productGrid.appendChild(productElement);
+} else {
+    productGrid.innerHTML = `<p>${productId ? "Product not found" : "No product selected"}</p>`;
 }
 
-function displayProduct() {
-  const productId = getProductId();
-  const product = products[productId];
-
-  if (product) {
-    document.getElementById("product-name").innerText = product.name;
-    const productImage = document.getElementById("product-image");
-    productImage.src = product.image;
-    productImage.style.borderRadius = "10px";
-    document.getElementById("product-description").innerText =
-      product.description;
-    document.getElementById("preview").src = product.preview;
-    document.getElementById("file-name").innerHTML = product.file_name;
-    document.getElementById("download-button").href = product.stl;
-    document.getElementById("buy_link").href = product.buy_link;
-    document.getElementById("model_link").href = product.model_link;
-    document.getElementById("buy-text").innerText = "Buy Now (" + product.price+")";
-    document.getElementById("model-text").innerText = "Model available on " + product.model_source + " and made by " + product.model_author;
-  } else {
-    document.getElementById("product-name").innerText =
-      "Product not found";
-  }
-    
-}
-
-displayProduct();
-document.addEventListener("DOMContentLoaded", () => {
-  const menuButton = document.getElementById("menu-button");
-  const overlay = document.querySelector(".overlay");
-
-  menuButton.addEventListener("click", () => {
-    overlay.classList.toggle("overlay--active");
-    menuButton.classList.toggle("active");
+document.getElementById('add-to-cart-btn').addEventListener('click', () => {
+    addToCart(product = products[productId]);
   });
-});
 

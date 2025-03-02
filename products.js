@@ -1,13 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const menuButton = document.getElementById("menu-button");
-  const overlay = document.querySelector(".overlay");
-
-  menuButton.addEventListener("click", () => {
-    overlay.classList.toggle("overlay--active");
-    menuButton.classList.toggle("active");
-  });
-});
-
     const products = {
       1: {
         id: 1,
@@ -22,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         model_author: "An0b1s",
         model_source: "Printables",
         buy_link: "https://buy.stripe.com/test_3cscO2cSS1ncgcE3cd",
-        price: "2.50$",
+        price: 2,
       },
       2: {
         id: 2,
@@ -37,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
         model_author: "Mr. Purple",
         model_source: "Printables",
-        price: "3.00$",
+        price: 3,
       },
       3: {
         id: 3,
@@ -52,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         buy_link: "https://buy.stripe.com/test_7sI6pEaKKaXM1hKcMO",
         model_author: "Triple G workshop",
         model_source: "Maker World",
-        price: "10.00$",
+        price: 10,
       },
       4: {
         id: 4,
@@ -66,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
         buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
         model_author: "Goldsand",
         model_source: "3MFA",
-        price: "10.00$",
+        price: 10,
       },
       5: {
         id: 5,
@@ -80,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
         buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
         model_author: "Goldsand",
         model_source: "3MFA",
-        price: "10.00$",
+        price: 10,
       },
       6: {
         id: 6,
@@ -94,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
         buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
         model_author: "Goldsand",
         model_source: "3MFA",
-        price: "10.00$",
+        price: 10,
       },
       7: {
         id: 7,
@@ -108,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
         buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
         model_author: "Goldsand",
         model_source: "3MFA",
-        price: "10.00$",
+        price: 10,
       },
       8: {
         id: 8,
@@ -122,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
         buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
         model_author: "Goldsand",
         model_source: "3MFA",
-        price: "10.00$",
+        price: 10,
       },
       9: {
         id: 5,
@@ -136,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
         buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
         model_author: "Goldsand",
         model_source: "3MFA",
-        price: "10.00$",
+        price: 10,
       },
       10: {
         id: 10,
@@ -150,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
         buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
         model_author: "Mr. Purple",
         model_source: "Printables",
-        price: "3.00$",
+        price: 3,
       },
       11: {
         id: 11,
@@ -164,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
         buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
         model_author: "Mr. Purple",
         model_source: "Printables",
-        price: "3.00$",
+        price: 3,
       },
       12: {
         id: 12,
@@ -178,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
         buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
         model_author: "Mr. Purple",
         model_source: "Printables",
-        price: "3.00$",
+        price: 3,
       },
       };
     

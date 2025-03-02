@@ -1,6 +1,6 @@
 const models = {
-  1: {
-    id: 1,
+  300: {
+    id: 300,
     name: "Product 1",
     url: "/models/1",
     description: "A small figurine to decorate your desk.",
@@ -11,10 +11,10 @@ const models = {
     model_link: "https://www.thingiverse.com/thing:6688083",
     model_author: "tosse52",
     model_source: "Thingiverse",
-    price: "3.00$",
+    price: 3,
   },
-  2: {
-    id: 2,
+  301: {
+    id: 301,
     name: "Pumpkin Spider Model by Mr. Purple",
     url: "/models/2",
     description: "A small figurine to decorate your desk.",
@@ -26,10 +26,10 @@ const models = {
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Mr. Purple",
     model_source: "Printables",
-    price: "3.00$",
+    price: 3,
   },
-  3: {
-    id: 3,
+  302: {
+    id: 302,
     name: "Simple Phone Stand Model by REDZC",
     url: "/models/3",
     description: "Easy printable phone stand that can be printed without support.",
@@ -41,10 +41,10 @@ const models = {
     model_author: "An0b1s",
     model_source: "Printables",
     buy_link: "https://buy.stripe.com/test_3cscO2cSS1ncgcE3cd",
-    price: "2.50$",
+    price: 3,
   },
-  4: {
-    id: 4,
+  303: {
+    id: 303,
     name: "Product 4",
     url: "/models/4",
     description: "A small figurine to decorate your desk.4",
@@ -54,11 +54,11 @@ const models = {
     model_link:"https://www.printables.com/model/1043965-cute-little-pumpkin-spider",
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Goldsand",
-    model_source: "3MFA",
-    price: "10.00$",
+    model_source: "Printables",
+    price: 3,
   },
-  5: {
-    id: 5,
+  304: {
+    id: 304,
     name: "Product 5",
     url: "/models/5",
     description: "A small figurine to decorate your desk.5",
@@ -68,11 +68,11 @@ const models = {
     model_link:"https://www.printables.com/model/1043965-cute-little-pumpkin-spider",
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Goldsand",
-    model_source: "3MFA",
-    price: "10.00$",
+    model_source: "Printables",
+    price: 3,
   },
-  6: {
-    id: 6,
+  305: {
+    id: 305,
     name: "Product 6",
     url: "/models/6",
     description: "A small figurine to decorate your desk.6",
@@ -82,11 +82,11 @@ const models = {
     model_link:"https://www.printables.com/model/1043965-cute-little-pumpkin-spider",
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Goldsand",
-    model_source: "3MFA",
-    price: "10.00$",
+    model_source: "Printables",
+    price: 3,
   },
-  7: {
-    id: 7,
+  306: {
+    id: 306,
     name: "Product 7",
     url: "/models/7",
     description: "A small figurine to decorate your desk.7",
@@ -96,11 +96,11 @@ const models = {
     model_link:"https://www.printables.com/model/1043965-cute-little-pumpkin-spider",
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Goldsand",
-    model_source: "3MFA",
-    price: "10.00$",
+    model_source: "Printables",
+    price: 3,
   },
-  8: {
-    id: 8,
+  307: {
+    id: 307,
     name: "Product 8",
     url: "/models/8",
     description: "A small figurine to decorate your desk.8",
@@ -110,11 +110,11 @@ const models = {
     model_link:"https://www.printables.com/model/1043965-cute-little-pumpkin-spider",
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Goldsand",
-    model_source: "3MFA",
-    price: "10.00$",
+    model_source: "Printables",
+    price: 3,
   },
-  9: {
-    id: 5,
+  308: {
+    id: 308,
     name: "Product 9",
     url: "/models/9",
     description: "A small figurine to decorate your desk.9",
@@ -125,10 +125,10 @@ const models = {
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Goldsand",
     model_source: "3MFA",
-    price: "10.00$",
+    price: 10,
   },
-  10: {
-    id: 10,
+  309: {
+    id: 309,
     name: "Product 10",
     url: "/models/10",
     description: "A small figurine to decorate your desk.10",
@@ -139,10 +139,10 @@ const models = {
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Mr. Purple",
     model_source: "Printables",
-    price: "3.00$",
+    price: 3,
   },
-  11: {
-    id: 11,
+  310: {
+    id: 310,
     name: "Product 11",
     url: "/models/11",
     description: "A small figurine to decorate your desk.11",
@@ -153,10 +153,10 @@ const models = {
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Mr. Purple",
     model_source: "Printables",
-    price: "3.00$",
+    price: 3,
   },
-  12: {
-    id: 12,
+  311: {
+    id: 311,
     name: "Product 12",
     url: "/models/12",
     description: "A small figurine to decorate your desk.12",
@@ -167,48 +167,49 @@ const models = {
     buy_link: "https://buy.stripe.com/test_8wM7tI066d5U1hK000",
     model_author: "Mr. Purple",
     model_source: "Printables",
-    price: "3.00$",
+    price: 3,
   },
-  };
+};
 
-  function getProductId() {
-    const params = new URLSearchParams(window.location.search);
-    return params.get("id");
-  }
-  
-  function displayProduct() {
-    const productId = getProductId();
+
+const productGrid = document.getElementById("product-details");
+
+// Get product ID from URL
+const urlParams = new URLSearchParams(window.location.search);
+const productId = parseInt(urlParams.get("id"));
+
+if (productId && models[productId]) {
     const product = models[productId];
-    if (product) {
-      document.getElementById("product-name").innerText = product.name;;
-      const productImage = document.getElementById("product-image");
-      productImage.src = product.image;;
-      productImage.style.borderRadius = "10px";
-      document.getElementById("product-description").innerText =
-        product.description;
-      document.getElementById("preview").src = product.preview;
-      document.getElementById("file-name").innerHTML = product.file_name;
-      document.getElementById("download-button").href = product.stl;
-      document.getElementById("buy_link").href = product.buy_link;
-      document.getElementById("model_link").href = product.model_link;
-      document.getElementById("buy-text").innerText = "Buy Now (" + product.price+")";
-      document.getElementById("model-text").innerText = "Model available on " + product.model_source + " and made by " + product.model_author;
-    } else {
-      document.getElementById("product-name").innerText =
-        "Product not found";
-    }
-      
-  }
-  
-  displayProduct();
-  document.addEventListener("DOMContentLoaded", () => {
-    const menuButton = document.getElementById("menu-button");
-    const overlay = document.querySelector(".overlay");
-  
-    menuButton.addEventListener("click", () => {
-      overlay.classList.toggle("overlay--active");
-      menuButton.classList.toggle("active");
-    });
+
+    const productElement = document.createElement("div");
+    productElement.classList.add("product");
+    productElement.innerHTML = `
+        
+            <img src="${product.image}" alt="${product.name}">
+        <div class="product-info">
+            <h3>${product.name}</h3>
+            <p>${product.description}</p>
+            <div class="product-price">
+                <span class="product-price-currency">$</span>
+                <span class="product-price-amount">${product.price.toFixed(2)}</span>
+            </div>
+            
+            <button class="product-link-button" id="model_link" onclick="window.location.href='${product.model_link}'" target="_blank">View original model on ${product.model_source} by ${product.model_author}</button>
+            <button class="product-link-button"  id="add-to-cart-btn" onclick="cart.addItem(${productId})">Add to cart</button>
+            <button class="product-link-button" id="print_link" onclick="window.location.href='${product.stl}'">Download: ${product.file_name}</button>
+            <button class="product-link-button" style"text-decoration: none; display: inline-block; margin-top: 1rem; display: flex; justify-content: center; align-items: center; position: relative;" onclick="window.location.href='${product.buy_link}'" target="_blank">Buy now</button>
+            <div class="back_button">
+                <button class="product-link-button" onclick="window.location.href='/products.html'" style="height: 3em; width: 12em; margin-right: 1em;"> Back to products</button>
+                <button class="product-link-button" onclick="window.location.href='/models.html'" style="height: 3em; width: 12em; margin-left: 1em;"> Back to models</button>
+            </div>
+        </div>
+    `;
+    productGrid.appendChild(productElement);
+} else {
+    productGrid.innerHTML = `<p>${productId ? "Product not found" : "No product selected"}</p>`;
+}
+
+document.getElementById('add-to-cart-btn').addEventListener('click', () => {
+    addToCart(product = products[productId]);
   });
-  
-  
+
